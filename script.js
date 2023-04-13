@@ -10,7 +10,7 @@ colors.forEach((color) => {
 });
 
 let drawActive = true;
-let gridPixels = 200;
+let gridPixels = 400;
 let selectedColor = '0000FF';
 
 document.querySelector('#blue').click();
@@ -75,8 +75,8 @@ function generateGrid(){
     document.querySelector('input').value = 100;
   }
   size = gridPixels / size;
-  for (let h = 0; h*size < 200; h++){
-    for (let w = 0; w*size < 200; w++){
+  for (let h = 0; h*size < gridPixels; h++){
+    for (let w = 0; w*size < gridPixels; w++){
       let div = document.createElement('div');
       div.classList.add('dot');
       div.setAttribute('style', 'height:' + size + 'px; width:' + size + 'px;' + 'background-color: #FFFFFF;');
